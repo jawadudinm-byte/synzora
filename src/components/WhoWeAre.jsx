@@ -22,7 +22,7 @@ export default function WhoWeAre() {
 
             {/* Metric 2 */}
             <div className="pt-4 md:pt-0 md:px-4 text-center md:text-left">
-              <p className="text-3xl sm:text-4xl font-extrabold text-[#FA782B] tracking-tight">
+              <p className="text-3xl sm:text-4xl font-extrabold text-sky-500 tracking-tight">
                 &lt; 100ms
               </p>
               <p className="text-xs sm:text-sm text-[#64748B] font-medium mt-1">
@@ -42,7 +42,7 @@ export default function WhoWeAre() {
 
             {/* Metric 4 */}
             <div className="pt-4 md:pt-0 md:px-4 text-center md:text-left">
-              <p className="text-3xl sm:text-4xl font-extrabold text-emerald-600 tracking-tight">
+              <p className="text-3xl sm:text-4xl font-extrabold text-blue-600 tracking-tight">
                 24/7
               </p>
               <p className="text-xs sm:text-sm text-[#64748B] font-medium mt-1">
@@ -63,8 +63,8 @@ export default function WhoWeAre() {
             
             {/* Overline */}
             <div className="inline-flex items-center space-x-2">
-              <span className="w-8 h-0.5 bg-[#FA782B]"></span>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#FA782B]">
+              <span className="w-8 h-0.5 bg-blue-600"></span>
+              <span className="text-xs font-bold uppercase tracking-wider text-blue-600">
                 WHO WE ARE
               </span>
             </div>
@@ -82,8 +82,8 @@ export default function WhoWeAre() {
             {/* Secondary Action Link */}
             <div className="pt-2">
               <a
-                href="#engineering-standards"
-                className="inline-flex items-center text-sm font-bold text-[#FA782B] hover:text-[#e6671d] transition-colors group cursor-pointer"
+                href="#services"
+                className="inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-500 transition-colors group cursor-pointer"
               >
                 <span>Discover Our Engineering Standards</span>
                 <ArrowRight className="w-4 h-4 ml-1.5 transition-transform group-hover:translate-x-1" />
@@ -112,14 +112,14 @@ export default function WhoWeAre() {
               </div>
             </div>
 
-            {/* Pillar 2: Vibrant Orange Left Border */}
-            <div className="bg-white border border-slate-200 border-l-4 border-l-[#FA782B] rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 group">
+            {/* Pillar 2: Sky Blue Left Border */}
+            <div className="bg-white border border-slate-200 border-l-4 border-l-sky-500 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 group">
               <div className="flex items-start space-x-4">
-                <div className="p-2.5 rounded-lg bg-orange-50 text-[#FA782B] group-hover:bg-[#FA782B] group-hover:text-white transition-colors shrink-0 mt-0.5">
+                <div className="p-2.5 rounded-lg bg-sky-50 text-sky-600 group-hover:bg-sky-600 group-hover:text-white transition-colors shrink-0 mt-0.5">
                   <Cpu className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-[#0F172A] mb-1.5 group-hover:text-[#FA782B] transition-colors">
+                  <h3 className="text-lg font-bold text-[#0F172A] mb-1.5 group-hover:text-sky-600 transition-colors">
                     Production-Grade Standards
                   </h3>
                   <p className="text-sm text-[#475569] leading-relaxed">
@@ -129,14 +129,14 @@ export default function WhoWeAre() {
               </div>
             </div>
 
-            {/* Pillar 3: Emerald Green Left Border */}
-            <div className="bg-white border border-slate-200 border-l-4 border-l-[#10B981] rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 group">
+            {/* Pillar 3: Accent Blue Left Border */}
+            <div className="bg-white border border-slate-200 border-l-4 border-l-blue-600 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 group">
               <div className="flex items-start space-x-4">
-                <div className="p-2.5 rounded-lg bg-emerald-50 text-[#10B981] group-hover:bg-[#10B981] group-hover:text-white transition-colors shrink-0 mt-0.5">
+                <div className="p-2.5 rounded-lg bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors shrink-0 mt-0.5">
                   <Rocket className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-[#0F172A] mb-1.5 group-hover:text-emerald-700 transition-colors">
+                  <h3 className="text-lg font-bold text-[#0F172A] mb-1.5 group-hover:text-blue-600 transition-colors">
                     Outcome-Driven Delivery
                   </h3>
                   <p className="text-sm text-[#475569] leading-relaxed">

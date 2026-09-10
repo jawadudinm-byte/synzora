@@ -101,7 +101,7 @@ export default function Navbar({ onOpenContact }) {
         },
         {
           title: 'CUSTOM ENGINEERING',
-          accentColor: '#FA782B',
+          accentColor: '#2563EB',
           items: [
             { title: 'Custom AI Agents', desc: 'Autonomous multi-agent systems & tool use.', icon: Cpu, tag: 'Hot', href: '#services' },
             { title: 'RAG & Knowledge Bases', desc: 'Enterprise document search with semantic vectors.', icon: Database, href: '#services' },
@@ -135,7 +135,7 @@ export default function Navbar({ onOpenContact }) {
         },
         {
           title: 'CUSTOM ENGINEERING',
-          accentColor: '#FA782B',
+          accentColor: '#2563EB',
           items: [
             { title: 'Full-Stack Web Platforms', desc: 'Next.js, React, Node.js & resilient APIs.', icon: Globe, tag: 'Core', href: '#services' },
             { title: 'API & Integration Pipelines', desc: 'GraphQL, REST & event-driven webhooks.', icon: Workflow, href: '#services' },
@@ -168,7 +168,7 @@ export default function Navbar({ onOpenContact }) {
         },
         {
           title: 'CUSTOM ENGINEERING',
-          accentColor: '#FA782B',
+          accentColor: '#2563EB',
           items: [
             { title: 'Cloud Architecture', desc: 'Infrastructure-as-Code with Terraform & AWS.', icon: Server, tag: 'Popular', href: '#services' },
             { title: 'DevOps & CI/CD Automation', desc: 'Zero-downtime deployment pipelines.', icon: Workflow, href: '#services' }
@@ -200,7 +200,7 @@ export default function Navbar({ onOpenContact }) {
         },
         {
           title: 'CUSTOM ENGINEERING',
-          accentColor: '#FA782B',
+          accentColor: '#2563EB',
           items: [
             { title: 'Staff Augmentation', desc: 'Senior React, Node, Python & Cloud developers.', icon: Code2, tag: 'Flexible', href: '#who-we-are' },
             { title: 'Dedicated Engineering Squads', desc: 'Autonomous cross-functional product teams.', icon: Rocket, href: '#who-we-are' }
@@ -244,17 +244,17 @@ export default function Navbar({ onOpenContact }) {
           
           {/* LEFT: BRAND LOGO */}
           <a href="#home" onClick={closeDropdowns} className="flex items-center space-x-3 cursor-pointer group">
-            <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-slate-900 to-[#07213A] border border-slate-700/80 group-hover:border-[#FA782B]/60 transition-all duration-300 shadow-inner">
+            <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-slate-900 to-[#07213A] border border-slate-700/80 group-hover:border-blue-500/60 transition-all duration-300 shadow-inner">
               <svg className="w-6 h-6 text-white group-hover:scale-105 transition-transform" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 17L10 5L16 17L20 9" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <circle cx="20" cy="7" r="2" fill="#FA782B" />
+                <circle cx="20" cy="7" r="2" fill="#2563EB" />
               </svg>
             </div>
             <div className="flex items-center">
-              <span className="text-2xl font-extrabold tracking-tight text-white font-sans">
+              <span className="text-2xl font-extrabold tracking-tight text-white">
                 Synzora
               </span>
-              <span className="w-2 h-2 rounded-full bg-[#FA782B] inline-block ml-1 animate-pulse" title="Synzora Tech Engine Active"></span>
+              <span className="w-2 h-2 rounded-full bg-blue-500 inline-block ml-1 animate-pulse" title="Synzora Tech Engine Active"></span>
             </div>
           </a>
 
@@ -287,13 +287,13 @@ export default function Navbar({ onOpenContact }) {
                 onClick={() => setIsMegaOpen(!isMegaOpen)}
                 className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${
                   isMegaOpen 
-                    ? 'text-[#FA782B] bg-slate-800/80 font-semibold' 
+                    ? 'text-sky-400 bg-slate-800/80 font-semibold' 
                     : 'text-slate-200 hover:text-white hover:bg-slate-800/60'
                 }`}
                 aria-expanded={isMegaOpen}
               >
                 <span>Our Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isMegaOpen ? 'rotate-180 text-[#FA782B]' : 'text-slate-400'}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isMegaOpen ? 'rotate-180 text-sky-400' : 'text-slate-400'}`} />
               </button>
             </div>
 
@@ -308,13 +308,13 @@ export default function Navbar({ onOpenContact }) {
                 onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
                 className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${
                   isSolutionsOpen 
-                    ? 'text-[#FA782B] bg-slate-800/80 font-semibold' 
+                    ? 'text-sky-400 bg-slate-800/80 font-semibold' 
                     : 'text-slate-200 hover:text-white hover:bg-slate-800/60'
                 }`}
                 aria-expanded={isSolutionsOpen}
               >
                 <span>Our Solutions</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isSolutionsOpen ? 'rotate-180 text-[#FA782B]' : 'text-slate-400'}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isSolutionsOpen ? 'rotate-180 text-sky-400' : 'text-slate-400'}`} />
               </button>
 
               {/* STANDARD SOLUTIONS DROPDOWN CONTAINER */}
@@ -336,16 +336,16 @@ export default function Navbar({ onOpenContact }) {
                         onClick={closeDropdowns}
                         className="flex items-start gap-3 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group"
                       >
-                        <div className="p-2 rounded-lg bg-slate-100 text-[#07213A] group-hover:bg-[#FA782B] group-hover:text-white transition-colors mt-0.5">
+                        <div className="p-2 rounded-lg bg-slate-100 text-[#07213A] group-hover:bg-blue-600 group-hover:text-white transition-colors mt-0.5">
                           <SolIcon className="w-4 h-4" />
                         </div>
                         <div className="flex-1">
                           <div className="flex items-center justify-between">
-                            <span className="text-sm font-semibold text-slate-900 group-hover:text-[#FA782B] transition-colors">
+                            <span className="text-sm font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">
                               {sol.title}
                             </span>
                             {sol.badge && (
-                              <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-orange-50 text-[#FA782B] border border-orange-200/60">
+                              <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-slate-100 text-[#07213A] border border-slate-200/60">
                                 {sol.badge}
                               </span>
                             )}
@@ -375,7 +375,7 @@ export default function Navbar({ onOpenContact }) {
             <button
               type="button"
               onClick={handleContactClick}
-              className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-[#FA782B] hover:bg-[#e6671d] rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
+              className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold text-[#07213A] bg-white hover:bg-slate-100 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
             >
               <span>Contact Us</span>
               <ArrowRight className="w-4 h-4 ml-1.5" />
@@ -390,7 +390,7 @@ export default function Navbar({ onOpenContact }) {
               className="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none"
               aria-label="Toggle Navigation Menu"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6 text-[#FA782B]" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
 
@@ -433,7 +433,7 @@ export default function Navbar({ onOpenContact }) {
                           }`}
                         >
                           <div className={`p-2 rounded-lg mt-0.5 transition-colors ${
-                            isActive ? 'bg-[#FA782B] text-white' : 'bg-slate-200 text-[#07213A] group-hover:bg-slate-300'
+                            isActive ? 'bg-blue-600 text-white' : 'bg-slate-200 text-[#07213A] group-hover:bg-slate-300'
                           }`}>
                             <CatIcon className="w-4 h-4" />
                           </div>
@@ -445,7 +445,7 @@ export default function Navbar({ onOpenContact }) {
                               </span>
                               {cat.badge && (
                                 <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
-                                  isActive ? 'bg-[#FA782B] text-white' : 'bg-orange-100 text-[#FA782B]'
+                                  isActive ? 'bg-blue-600 text-white' : 'bg-blue-50 text-blue-600'
                                 }`}>
                                   {cat.badge}
                                 </span>
@@ -465,9 +465,9 @@ export default function Navbar({ onOpenContact }) {
 
                 <div className="mt-4 pt-3 border-t border-slate-200/80 px-3 flex items-center justify-between text-xs text-slate-500">
                   <span className="flex items-center gap-1 font-medium">
-                    <Sparkles className="w-3.5 h-3.5 text-[#FA782B]" /> Enterprise Ready
+                    <Sparkles className="w-3.5 h-3.5 text-sky-400" /> Enterprise Ready
                   </span>
-                  <a href="#services" onClick={closeDropdowns} className="text-[#07213A] font-semibold hover:text-[#FA782B] transition-colors flex items-center gap-1">
+                  <a href="#services" onClick={closeDropdowns} className="text-[#07213A] font-semibold hover:text-blue-600 transition-colors flex items-center gap-1">
                     View All <ArrowRight className="w-3 h-3" />
                   </a>
                 </div>
@@ -511,15 +511,15 @@ export default function Navbar({ onOpenContact }) {
                                 <div className="flex items-center justify-between">
                                   <div className="flex items-center space-x-2">
                                     {ItemIcon && (
-                                      <ItemIcon className="w-3.5 h-3.5 text-slate-400 group-hover:text-[#FA782B] transition-colors" />
+                                      <ItemIcon className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 transition-colors" />
                                     )}
-                                    <span className="text-sm font-semibold text-slate-800 group-hover:text-[#FA782B] transition-colors">
+                                    <span className="text-sm font-semibold text-slate-800 group-hover:text-blue-600 transition-colors">
                                       {item.title}
                                     </span>
                                   </div>
 
                                   {item.tag && (
-                                    <span className="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-slate-100 text-[#07213A] group-hover:bg-[#FA782B] group-hover:text-white transition-colors">
+                                    <span className="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-slate-100 text-[#07213A] group-hover:bg-blue-600 group-hover:text-white transition-colors">
                                       {item.tag}
                                     </span>
                                   )}
@@ -539,8 +539,8 @@ export default function Navbar({ onOpenContact }) {
                 <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between bg-slate-50 -mx-6 -mb-6 p-4 rounded-b-2xl">
                   <div className="flex items-center space-x-2">
                     <span className="flex h-2 w-2 relative">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FA782B] opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-[#FA782B]"></span>
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-400"></span>
                     </span>
                     <span className="text-xs font-medium text-slate-600">
                       Need custom architecture or advisory?
@@ -550,7 +550,7 @@ export default function Navbar({ onOpenContact }) {
                   <button
                     type="button"
                     onClick={handleContactClick}
-                    className="inline-flex items-center text-xs font-bold text-[#07213A] hover:text-[#FA782B] transition-colors gap-1"
+                    className="inline-flex items-center text-xs font-bold text-[#07213A] hover:text-blue-600 transition-colors gap-1"
                   >
                     <span>Book a Technical Audit</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -586,7 +586,7 @@ export default function Navbar({ onOpenContact }) {
           <div className="border-t border-b border-slate-800 py-2">
             <button
               onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-              className="w-full flex items-center justify-between px-3 py-2 text-base font-semibold text-[#FA782B] hover:bg-slate-800 rounded-lg"
+              className="w-full flex items-center justify-between px-3 py-2 text-base font-semibold text-sky-400 hover:bg-slate-800 rounded-lg"
             >
               <span>Our Services</span>
               <ChevronDown className={`w-5 h-5 transition-transform ${mobileServicesOpen ? 'rotate-180' : ''}`} />
@@ -597,10 +597,10 @@ export default function Navbar({ onOpenContact }) {
                 {servicesCategories.map((cat) => (
                   <div key={cat.id} className="bg-slate-900/80 rounded-xl p-3 border border-slate-800">
                     <div className="flex items-center space-x-2 text-white font-bold text-sm mb-2">
-                      <cat.icon className="w-4 h-4 text-[#FA782B]" />
+                      <cat.icon className="w-4 h-4 text-sky-400" />
                       <span>{cat.name}</span>
                     </div>
-                    <div className="space-y-1.5 pl-2 border-l-2 border-[#FA782B]/40">
+                    <div className="space-y-1.5 pl-2 border-l-2 border-blue-600/40">
                       {cat.columns.map((col, cIdx) => (
                         <div key={cIdx} className="space-y-1 my-1">
                           <p className="text-[10px] font-bold text-slate-400 uppercase">{col.title}</p>
@@ -609,7 +609,7 @@ export default function Navbar({ onOpenContact }) {
                               key={iIdx}
                               href={it.href}
                               onClick={closeDropdowns}
-                              className="block text-xs text-slate-300 hover:text-[#FA782B] py-0.5"
+                              className="block text-xs text-slate-300 hover:text-sky-400 py-0.5"
                             >
                               • {it.title}
                             </a>
@@ -640,7 +640,7 @@ export default function Navbar({ onOpenContact }) {
                     key={index}
                     href={sol.href}
                     onClick={closeDropdowns}
-                    className="block text-sm text-slate-300 hover:text-[#FA782B] py-1"
+                    className="block text-sm text-slate-300 hover:text-sky-400 py-1"
                   >
                     {sol.title}
                   </a>
@@ -662,7 +662,7 @@ export default function Navbar({ onOpenContact }) {
             <button
               type="button"
               onClick={handleContactClick}
-              className="w-full flex items-center justify-center px-5 py-3 rounded-lg text-center font-bold text-white bg-[#FA782B] hover:bg-[#e6671d] shadow-md cursor-pointer"
+              className="w-full flex items-center justify-center px-5 py-3 rounded-lg text-center font-bold text-white bg-blue-600 hover:bg-blue-500 shadow-md cursor-pointer"
             >
               Contact Us
             </button>

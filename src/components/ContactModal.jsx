@@ -71,7 +71,7 @@ export default function ContactModal({ isOpen, onClose }) {
         
         {/* Ambient Top Glow */}
         <div 
-          className="absolute -top-20 left-1/2 -translate-x-1/2 w-80 h-40 bg-[#FA782B]/20 rounded-full blur-3xl pointer-events-none" 
+          className="absolute -top-20 left-1/2 -translate-x-1/2 w-80 h-40 bg-blue-600/20 rounded-full blur-3xl pointer-events-none" 
           aria-hidden="true" 
         />
 
@@ -79,7 +79,7 @@ export default function ContactModal({ isOpen, onClose }) {
         <button
           onClick={onClose}
           type="button"
-          className="absolute top-5 right-5 p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors focus:outline-none z-10"
+          className="absolute top-5 right-5 p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors focus:outline-none z-10 cursor-pointer"
           aria-label="Close modal"
         >
           <X className="w-5 h-5" />
@@ -88,7 +88,7 @@ export default function ContactModal({ isOpen, onClose }) {
         {submitted ? (
           /* SUCCESS STATE */
           <div className="py-8 text-center space-y-4">
-            <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto border border-emerald-500/30 animate-bounce">
+            <div className="w-16 h-16 rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center mx-auto border border-sky-500/30 animate-bounce">
               <CheckCircle2 className="w-8 h-8" />
             </div>
             
@@ -101,7 +101,7 @@ export default function ContactModal({ isOpen, onClose }) {
             <div className="pt-4">
               <button
                 onClick={handleReset}
-                className="px-6 py-2.5 bg-[#FA782B] hover:bg-[#e6671d] text-white text-sm font-bold rounded-lg transition-colors shadow-md cursor-pointer"
+                className="px-6 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-bold rounded-lg transition-colors shadow-md cursor-pointer"
               >
                 Close & Return
               </button>
@@ -113,7 +113,7 @@ export default function ContactModal({ isOpen, onClose }) {
             
             {/* Header Badge & Titles */}
             <div className="mb-6 space-y-2">
-              <span className="text-[#FA782B] text-xs font-bold uppercase tracking-wider inline-flex items-center gap-1.5">
+              <span className="text-sky-400 text-xs font-bold uppercase tracking-wider inline-flex items-center gap-1.5">
                 <Sparkles className="w-3.5 h-3.5" />
                 START A SPRINT
               </span>
@@ -130,9 +130,9 @@ export default function ContactModal({ isOpen, onClose }) {
               <button
                 onClick={() => setActiveTab('message')}
                 type="button"
-                className={`py-2 px-3 rounded-lg text-xs font-semibold transition-all flex items-center justify-center gap-2 ${
+                className={`py-2 px-3 rounded-lg text-xs font-semibold transition-all flex items-center justify-center gap-2 cursor-pointer ${
                   activeTab === 'message'
-                    ? 'bg-[#FA782B] text-white shadow-md'
+                    ? 'bg-blue-600 text-white shadow-md'
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
@@ -143,9 +143,9 @@ export default function ContactModal({ isOpen, onClose }) {
               <button
                 onClick={() => setActiveTab('calendar')}
                 type="button"
-                className={`py-2 px-3 rounded-lg text-xs font-semibold transition-all flex items-center justify-center gap-2 ${
+                className={`py-2 px-3 rounded-lg text-xs font-semibold transition-all flex items-center justify-center gap-2 cursor-pointer ${
                   activeTab === 'calendar'
-                    ? 'bg-[#FA782B] text-white shadow-md'
+                    ? 'bg-blue-600 text-white shadow-md'
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
@@ -172,7 +172,7 @@ export default function ContactModal({ isOpen, onClose }) {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="e.g. Alex Morgan"
-                    className="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#FA782B] transition-colors"
+                    className="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
                   />
                 </div>
 
@@ -186,7 +186,7 @@ export default function ContactModal({ isOpen, onClose }) {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="alex@company.com"
-                    className="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#FA782B] transition-colors"
+                    className="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
                   />
                 </div>
 
@@ -199,7 +199,7 @@ export default function ContactModal({ isOpen, onClose }) {
                     value={formData.projectScope}
                     onChange={(e) => setFormData({ ...formData, projectScope: e.target.value })}
                     placeholder="Describe your tech stack, goals, or timeline..."
-                    className="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#FA782B] transition-colors resize-none"
+                    className="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors resize-none"
                   />
                 </div>
 
@@ -207,7 +207,7 @@ export default function ContactModal({ isOpen, onClose }) {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-3.5 bg-[#FA782B] hover:bg-[#e6671d] disabled:opacity-60 text-white font-bold text-sm rounded-xl shadow-lg shadow-[#FA782B]/20 transition-all flex items-center justify-center gap-2 group cursor-pointer"
+                    className="w-full py-3.5 bg-blue-600 hover:bg-blue-500 disabled:opacity-60 text-white font-bold text-sm rounded-xl shadow-lg shadow-blue-600/25 transition-all flex items-center justify-center gap-2 group cursor-pointer"
                   >
                     {isSubmitting ? (
                       <>
@@ -224,7 +224,7 @@ export default function ContactModal({ isOpen, onClose }) {
                 </div>
 
                 <div className="flex items-center justify-center gap-2 text-[11px] text-slate-400 pt-1">
-                  <Clock className="w-3.5 h-3.5 text-[#FA782B]" />
+                  <Clock className="w-3.5 h-3.5 text-sky-400" />
                   <span>Average response time: &lt; 4 hours</span>
                 </div>
               </form>
@@ -232,7 +232,7 @@ export default function ContactModal({ isOpen, onClose }) {
               /* TAB 2: INSTANT CALENDAR SCOPING */
               <div className="space-y-5 text-center py-2">
                 <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-5 space-y-3">
-                  <div className="w-10 h-10 rounded-full bg-[#FA782B]/10 text-[#FA782B] flex items-center justify-center mx-auto">
+                  <div className="w-10 h-10 rounded-full bg-blue-600/15 text-sky-400 flex items-center justify-center mx-auto">
                     <Calendar className="w-5 h-5" />
                   </div>
                   <h4 className="text-base font-bold text-white">30-Minute Architecture Review</h4>
@@ -245,7 +245,7 @@ export default function ContactModal({ isOpen, onClose }) {
                   href="https://cal.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3.5 bg-[#FA782B] hover:bg-[#e6671d] text-white font-bold text-sm rounded-xl shadow-lg shadow-[#FA782B]/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm rounded-xl shadow-lg shadow-blue-600/25 transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <span>Open Live Calendar (Cal.com)</span>
                   <ArrowRight className="w-4 h-4" />

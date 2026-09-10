@@ -20,7 +20,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FFFFFF] text-[#0F172A] flex flex-col font-sans antialiased selection:bg-[#FA782B] selection:text-white relative">
+    <div className="min-h-screen bg-[#FFFFFF] text-[#0F172A] flex flex-col antialiased selection:bg-blue-600 selection:text-white relative">
       
       {/* 1. DEEP NAVY NAVBAR */}
       <Navbar onOpenContact={handleOpenContact} />

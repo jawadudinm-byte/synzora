@@ -24,22 +24,22 @@ export default function Hero({ onOpenContact }) {
 
       {/* Subtle ambient accent glow */}
       <div 
-        className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#FA782B]/10 rounded-full blur-3xl pointer-events-none z-0" 
-        aria-hidden="true"
+        className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/10 rounded-full blur-3xl pointer-events-none z-0" 
+        aria-hidden="true" 
       />
 
       {/* 1. UPPER / MIDDLE HERO CONTENT */}
       <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center my-auto pt-4">
         
         {/* OVERLINE PILL BADGE */}
-        <div className="inline-block border border-orange-500/40 bg-black/40 text-orange-400 font-semibold text-xs tracking-wide px-3.5 py-1 mb-4 rounded-full shadow-sm backdrop-blur-sm">
+        <div className="inline-block border border-blue-500/40 bg-black/40 text-sky-400 font-semibold text-xs tracking-wide px-3.5 py-1 mb-4 rounded-full shadow-sm backdrop-blur-sm">
           ⚡ ENTERPRISE SOFTWARE & CLOUD PLATFORMS
         </div>
 
         {/* MAIN HEADLINE (H1) */}
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight mb-4 drop-shadow-md text-balance">
           Engineering Resilient Digital Systems for{' '}
-          <span className="text-[#FA782B]">Global Scale</span>
+          <span className="text-sky-400">Global Scale</span>
         </h1>
 
         {/* SUBHEADLINE */}
@@ -54,7 +54,7 @@ export default function Hero({ onOpenContact }) {
           <button
             type="button"
             onClick={handlePrimaryClick}
-            className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white bg-[#FA782B] hover:bg-[#e6671d] rounded-lg shadow-lg shadow-[#FA782B]/20 hover:shadow-[#FA782B]/35 transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group"
+            className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white bg-blue-600 hover:bg-blue-500 rounded-lg shadow-lg shadow-blue-600/30 hover:shadow-blue-600/45 transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group"
           >
             <span>Schedule Technical Discovery</span>
             <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
@@ -93,16 +93,16 @@ export default function Hero({ onOpenContact }) {
           </div>
         </div>
 
-        {/* CARD 2: Orange Left Accent Border */}
-        <div className="bg-[#07213A]/75 backdrop-blur-md rounded-xl p-4 sm:p-5 border border-white/15 border-l-4 border-l-[#FA782B] shadow-2xl hover:border-white/30 hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between group">
+        {/* CARD 2: Sky Left Accent Border */}
+        <div className="bg-[#07213A]/75 backdrop-blur-md rounded-xl p-4 sm:p-5 border border-white/15 border-l-4 border-l-sky-400 shadow-2xl hover:border-white/30 hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between group">
           <div>
             <div className="flex items-center justify-between mb-2">
-              <div className="p-2 rounded-lg bg-orange-500/10 text-[#FA782B] group-hover:bg-[#FA782B] group-hover:text-white transition-colors">
+              <div className="p-2 rounded-lg bg-sky-500/10 text-sky-400 group-hover:bg-sky-400 group-hover:text-[#07213A] transition-colors">
                 <Cloud className="w-4 h-4" />
               </div>
-              <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-[#FA782B] transition-colors" />
+              <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-sky-300 transition-colors" />
             </div>
-            <h3 className="text-white text-sm sm:text-base font-bold group-hover:text-[#FA782B] transition-colors">
+            <h3 className="text-white text-sm sm:text-base font-bold group-hover:text-sky-300 transition-colors">
               Cloud & Data Architecture
             </h3>
             <p className="text-slate-300 text-xs mt-1 leading-snug">
@@ -111,16 +111,16 @@ export default function Hero({ onOpenContact }) {
           </div>
         </div>
 
-        {/* CARD 3: Emerald Left Accent Border */}
-        <div className="bg-[#07213A]/75 backdrop-blur-md rounded-xl p-4 sm:p-5 border border-white/15 border-l-4 border-l-emerald-400 shadow-2xl hover:border-white/30 hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between group">
+        {/* CARD 3: Deep Blue Left Accent Border */}
+        <div className="bg-[#07213A]/75 backdrop-blur-md rounded-xl p-4 sm:p-5 border border-white/15 border-l-4 border-l-blue-500 shadow-2xl hover:border-white/30 hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between group">
           <div>
             <div className="flex items-center justify-between mb-2">
-              <div className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-400 group-hover:text-[#07213A] transition-colors">
+              <div className="p-2 rounded-lg bg-blue-500/10 text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-colors">
                 <ShieldCheck className="w-4 h-4" />
               </div>
-              <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-emerald-300 transition-colors" />
+              <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-blue-300 transition-colors" />
             </div>
-            <h3 className="text-white text-sm sm:text-base font-bold group-hover:text-emerald-300 transition-colors">
+            <h3 className="text-white text-sm sm:text-base font-bold group-hover:text-blue-300 transition-colors">
               Enterprise Solutions
             </h3>
             <p className="text-slate-300 text-xs mt-1 leading-snug">

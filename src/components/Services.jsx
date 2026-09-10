@@ -21,11 +21,11 @@ export default function Services() {
         <div className="text-center max-w-3xl mx-auto space-y-4">
           
           <div className="inline-flex items-center space-x-2 justify-center">
-            <span className="w-8 h-0.5 bg-[#FA782B]"></span>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#FA782B]">
+            <span className="w-8 h-0.5 bg-blue-600"></span>
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-600">
               OUR CAPABILITIES
             </span>
-            <span className="w-8 h-0.5 bg-[#FA782B]"></span>
+            <span className="w-8 h-0.5 bg-blue-600"></span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#07213A] tracking-tight leading-tight">
@@ -73,12 +73,12 @@ export default function Services() {
           </div>
 
           {/* CARD 2: Cloud & Database Architecture */}
-          <div className="bg-white border border-slate-200 border-l-4 border-l-[#FA782B] rounded-xl p-7 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+          <div className="bg-white border border-slate-200 border-l-4 border-l-sky-500 rounded-xl p-7 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
             <div>
-              <div className="w-12 h-12 rounded-xl bg-orange-50 text-[#FA782B] flex items-center justify-center mb-6 group-hover:bg-[#FA782B] group-hover:text-white transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center mb-6 group-hover:bg-sky-600 group-hover:text-white transition-colors">
                 <Database className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-[#0F172A] mb-3 group-hover:text-[#FA782B] transition-colors">
+              <h3 className="text-xl font-bold text-[#0F172A] mb-3 group-hover:text-sky-600 transition-colors">
                 Cloud & Database Architecture
               </h3>
               <p className="text-sm text-[#475569] leading-relaxed mb-6">
@@ -92,7 +92,7 @@ export default function Services() {
                 {['PostgreSQL', 'Supabase', 'REST APIs', 'Edge Functions'].map((pill, idx) => (
                   <span
                     key={idx}
-                    className="text-xs font-semibold px-2.5 py-1 rounded-md bg-orange-50/80 text-[#FA782B] border border-orange-200/60"
+                    className="text-xs font-semibold px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80"
                   >
                     {pill}
                   </span>
@@ -102,12 +102,12 @@ export default function Services() {
           </div>
 
           {/* CARD 3: Intelligent Workflow Automation */}
-          <div className="bg-white border border-slate-200 border-l-4 border-l-[#10B981] rounded-xl p-7 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+          <div className="bg-white border border-slate-200 border-l-4 border-l-blue-600 rounded-xl p-7 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
             <div>
-              <div className="w-12 h-12 rounded-xl bg-emerald-50 text-[#10B981] flex items-center justify-center mb-6 group-hover:bg-[#10B981] group-hover:text-white transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                 <Workflow className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-[#0F172A] mb-3 group-hover:text-emerald-700 transition-colors">
+              <h3 className="text-xl font-bold text-[#0F172A] mb-3 group-hover:text-blue-600 transition-colors">
                 Intelligent Workflow Automation
               </h3>
               <p className="text-sm text-[#475569] leading-relaxed mb-6">
@@ -121,7 +121,7 @@ export default function Services() {
                 {['n8n', 'Webhooks', 'Automated Pipelines', 'Microservices'].map((pill, idx) => (
                   <span
                     key={idx}
-                    className="text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-50/80 text-emerald-700 border border-emerald-200/60"
+                    className="text-xs font-semibold px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80"
                   >
                     {pill}
                   </span>
@@ -146,7 +146,7 @@ export default function Services() {
           
           {/* Header text inside Navy Band */}
           <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-cyan-400 bg-cyan-950/80 border border-cyan-800/60 px-3 py-1 rounded-full inline-block">
+            <span className="text-xs font-bold uppercase tracking-wider text-sky-400 bg-slate-900/90 border border-slate-700 px-3 py-1 rounded-full inline-block">
               ENTERPRISE SOLUTIONS
             </span>
 
@@ -165,7 +165,7 @@ export default function Services() {
             {/* Pillar 1: High Concurrency */}
             <div className="bg-slate-900/60 border border-slate-800/90 rounded-xl p-6 backdrop-blur-md hover:border-slate-700 transition-colors">
               <div className="flex items-center space-x-3 mb-3">
-                <div className="p-2 rounded-lg bg-[#FA782B]/10 text-[#FA782B]">
+                <div className="p-2 rounded-lg bg-sky-500/10 text-sky-400">
                   <Zap className="w-5 h-5" />
                 </div>
                 <h4 className="text-base font-bold text-white">⚡ High Concurrency</h4>
@@ -191,7 +191,7 @@ export default function Services() {
             {/* Pillar 3: Scalable Architecture */}
             <div className="bg-slate-900/60 border border-slate-800/90 rounded-xl p-6 backdrop-blur-md hover:border-slate-700 transition-colors">
               <div className="flex items-center space-x-3 mb-3">
-                <div className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400">
+                <div className="p-2 rounded-lg bg-blue-500/10 text-blue-400">
                   <LineChart className="w-5 h-5" />
                 </div>
                 <h4 className="text-base font-bold text-white">📈 Scalable Architecture</h4>
