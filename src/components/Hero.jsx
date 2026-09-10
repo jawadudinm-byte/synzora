@@ -31,11 +31,6 @@ export default function Hero({ onOpenContact }) {
       {/* 1. UPPER / MIDDLE HERO CONTENT */}
       <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center my-auto pt-4">
         
-        {/* OVERLINE PILL BADGE */}
-        <div className="inline-block border border-blue-500/40 bg-black/40 text-sky-400 font-semibold text-xs tracking-wide px-3.5 py-1 mb-4 rounded-full shadow-sm backdrop-blur-sm">
-          ⚡ ENTERPRISE SOFTWARE & CLOUD PLATFORMS
-        </div>
-
         {/* MAIN HEADLINE (H1) */}
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight mb-4 drop-shadow-md text-balance">
           Engineering Resilient Digital Systems for{' '}
