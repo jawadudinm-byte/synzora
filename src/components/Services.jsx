@@ -134,7 +134,7 @@ export default function Services() {
       </div>
 
       {/* 3. MID-PAGE CONTRAST STRIP (Deep Navy Band - #07213A) */}
-      <div className="bg-[#07213A] text-white py-16 lg:py-20 border-t border-b border-slate-800 relative overflow-hidden">
+      <div id="solutions" className="bg-[#07213A] text-white py-16 lg:py-20 border-t border-b border-slate-800 relative overflow-hidden">
         
         {/* Subtle background ambient overlay */}
         <div 

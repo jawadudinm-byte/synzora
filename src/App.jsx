@@ -32,7 +32,7 @@ export default function App() {
       <WhoWeAre />
 
       {/* 4. PROOF OF CAPABILITY - PROJECT SHOWCASE */}
-      <ProjectShowcase />
+      <ProjectShowcase onOpenContact={handleOpenContact} />
 
       {/* 5. SERVICES SECTION & MID-PAGE NAVY CONTRAST BAND */}
       <Services />

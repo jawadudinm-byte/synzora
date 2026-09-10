@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {
   ChevronDown,
   Sparkles,
@@ -35,6 +35,27 @@ export default function Navbar({ onOpenContact }) {
 
   const megaTimeoutRef = useRef(null);
   const solutionsTimeoutRef = useRef(null);
+  const headerRef = useRef(null);
+
+  // Outside click handler to close dropdowns cleanly
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (headerRef.current && !headerRef.current.contains(e.target)) {
+        setIsMegaOpen(false);
+        setIsSolutionsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const closeDropdowns = () => {
+    setIsMegaOpen(false);
+    setIsSolutionsOpen(false);
+    setIsMobileMenuOpen(false);
+  };
 
   const handleMegaMouseEnter = () => {
     if (megaTimeoutRef.current) clearTimeout(megaTimeoutRef.current);
@@ -73,27 +94,27 @@ export default function Navbar({ onOpenContact }) {
           title: 'STRATEGY & GOVERNANCE',
           accentColor: '#07213A',
           items: [
-            { title: 'AI Strategy Consulting', desc: 'Roadmaps for generative AI & ROI evaluation.', icon: Sparkles, tag: 'New' },
-            { title: 'N8n Automation & Workflows', desc: 'Event-driven workflow orchestration at scale.', icon: Workflow },
-            { title: 'Data Governance & Audit', desc: 'Vector stores, compliance & privacy guardrails.', icon: ShieldCheck }
+            { title: 'AI Strategy Consulting', desc: 'Roadmaps for generative AI & ROI evaluation.', icon: Sparkles, tag: 'New', href: '#services' },
+            { title: 'N8n Automation & Workflows', desc: 'Event-driven workflow orchestration at scale.', icon: Workflow, href: '#services' },
+            { title: 'Data Governance & Audit', desc: 'Vector stores, compliance & privacy guardrails.', icon: ShieldCheck, href: '#services' }
           ]
         },
         {
           title: 'CUSTOM ENGINEERING',
           accentColor: '#FA782B',
           items: [
-            { title: 'Custom AI Agents', desc: 'Autonomous multi-agent systems & tool use.', icon: Cpu, tag: 'Hot' },
-            { title: 'RAG & Knowledge Bases', desc: 'Enterprise document search with semantic vectors.', icon: Database },
-            { title: 'Predictive Analytics', desc: 'Real-time forecasting engines & ML pipelines.', icon: LineChart }
+            { title: 'Custom AI Agents', desc: 'Autonomous multi-agent systems & tool use.', icon: Cpu, tag: 'Hot', href: '#services' },
+            { title: 'RAG & Knowledge Bases', desc: 'Enterprise document search with semantic vectors.', icon: Database, href: '#services' },
+            { title: 'Predictive Analytics', desc: 'Real-time forecasting engines & ML pipelines.', icon: LineChart, href: '#services' }
           ]
         },
         {
           title: 'ENTERPRISE SCALING',
           accentColor: '#07213A',
           items: [
-            { title: 'Model Fine-Tuning', desc: 'Domain-adapted open-source LLM optimization.', icon: Layers },
-            { title: 'Database & Performance Tuning', desc: 'Sub-millisecond query optimization & indexing.', icon: Activity },
-            { title: 'MLOps Infrastructure', desc: 'CI/CD for Machine Learning models & monitoring.', icon: Server }
+            { title: 'Model Fine-Tuning', desc: 'Domain-adapted open-source LLM optimization.', icon: Layers, href: '#services' },
+            { title: 'Database & Performance Tuning', desc: 'Sub-millisecond query optimization & indexing.', icon: Activity, href: '#services' },
+            { title: 'MLOps Infrastructure', desc: 'CI/CD for Machine Learning models & monitoring.', icon: Server, href: '#services' }
           ]
         }
       ]
@@ -108,25 +129,25 @@ export default function Navbar({ onOpenContact }) {
           title: 'STRATEGY & GOVERNANCE',
           accentColor: '#07213A',
           items: [
-            { title: 'Product Discovery & Audit', desc: 'Technical architecture & code quality reviews.', icon: CheckCircle2 },
-            { title: 'UI/UX System Design', desc: 'Scalable design systems & accessible interfaces.', icon: Layers }
+            { title: 'Product Discovery & Audit', desc: 'Technical architecture & code quality reviews.', icon: CheckCircle2, href: '#services' },
+            { title: 'UI/UX System Design', desc: 'Scalable design systems & accessible interfaces.', icon: Layers, href: '#services' }
           ]
         },
         {
           title: 'CUSTOM ENGINEERING',
           accentColor: '#FA782B',
           items: [
-            { title: 'Full-Stack Web Platforms', desc: 'Next.js, React, Node.js & resilient APIs.', icon: Globe, tag: 'Core' },
-            { title: 'API & Integration Pipelines', desc: 'GraphQL, REST & event-driven webhooks.', icon: Workflow },
-            { title: 'Mobile & SaaS Apps', desc: 'Cross-platform progressive web apps.', icon: Rocket }
+            { title: 'Full-Stack Web Platforms', desc: 'Next.js, React, Node.js & resilient APIs.', icon: Globe, tag: 'Core', href: '#services' },
+            { title: 'API & Integration Pipelines', desc: 'GraphQL, REST & event-driven webhooks.', icon: Workflow, href: '#services' },
+            { title: 'Mobile & SaaS Apps', desc: 'Cross-platform progressive web apps.', icon: Rocket, href: '#services' }
           ]
         },
         {
           title: 'ENTERPRISE SCALING',
           accentColor: '#07213A',
           items: [
-            { title: 'Performance Optimization', desc: 'Core Web Vitals & low-latency rendering.', icon: Activity },
-            { title: 'Legacy Modernization', desc: 'Monolith to micro-frontend refactoring.', icon: Boxes }
+            { title: 'Performance Optimization', desc: 'Core Web Vitals & low-latency rendering.', icon: Activity, href: '#services' },
+            { title: 'Legacy Modernization', desc: 'Monolith to micro-frontend refactoring.', icon: Boxes, href: '#services' }
           ]
         }
       ]
@@ -141,24 +162,24 @@ export default function Navbar({ onOpenContact }) {
           title: 'STRATEGY & GOVERNANCE',
           accentColor: '#07213A',
           items: [
-            { title: 'Cloud Readiness & Strategy', desc: 'AWS, GCP & Azure migration blueprints.', icon: Cloud },
-            { title: 'Cost Optimization (FinOps)', desc: 'Infrastructure cost reduction & resource right-sizing.', icon: LineChart }
+            { title: 'Cloud Readiness & Strategy', desc: 'AWS, GCP & Azure migration blueprints.', icon: Cloud, href: '#services' },
+            { title: 'Cost Optimization (FinOps)', desc: 'Infrastructure cost reduction & resource right-sizing.', icon: LineChart, href: '#services' }
           ]
         },
         {
           title: 'CUSTOM ENGINEERING',
           accentColor: '#FA782B',
           items: [
-            { title: 'Cloud Architecture', desc: 'Infrastructure-as-Code with Terraform & AWS.', icon: Server, tag: 'Popular' },
-            { title: 'DevOps & CI/CD Automation', desc: 'Zero-downtime deployment pipelines.', icon: Workflow }
+            { title: 'Cloud Architecture', desc: 'Infrastructure-as-Code with Terraform & AWS.', icon: Server, tag: 'Popular', href: '#services' },
+            { title: 'DevOps & CI/CD Automation', desc: 'Zero-downtime deployment pipelines.', icon: Workflow, href: '#services' }
           ]
         },
         {
           title: 'ENTERPRISE SCALING',
           accentColor: '#07213A',
           items: [
-            { title: 'Kubernetes & Serverless', desc: 'Auto-scaling containerized cloud workloads.', icon: Boxes },
-            { title: 'Disaster Recovery & SLA', desc: '99.99% uptime guarantee & backup automation.', icon: Lock }
+            { title: 'Kubernetes & Serverless', desc: 'Auto-scaling containerized cloud workloads.', icon: Boxes, href: '#services' },
+            { title: 'Disaster Recovery & SLA', desc: '99.99% uptime guarantee & backup automation.', icon: Lock, href: '#services' }
           ]
         }
       ]
@@ -173,24 +194,24 @@ export default function Navbar({ onOpenContact }) {
           title: 'STRATEGY & GOVERNANCE',
           accentColor: '#07213A',
           items: [
-            { title: 'Team Scaling Strategy', desc: 'Skills gap analysis & onboarding blueprints.', icon: Users },
-            { title: 'Agile Integration Plan', desc: 'Seamless alignment with your current sprints.', icon: Workflow }
+            { title: 'Team Scaling Strategy', desc: 'Skills gap analysis & onboarding blueprints.', icon: Users, href: '#who-we-are' },
+            { title: 'Agile Integration Plan', desc: 'Seamless alignment with your current sprints.', icon: Workflow, href: '#who-we-are' }
           ]
         },
         {
           title: 'CUSTOM ENGINEERING',
           accentColor: '#FA782B',
           items: [
-            { title: 'Staff Augmentation', desc: 'Senior React, Node, Python & Cloud developers.', icon: Code2, tag: 'Flexible' },
-            { title: 'Dedicated Engineering Squads', desc: 'Autonomous cross-functional product teams.', icon: Rocket }
+            { title: 'Staff Augmentation', desc: 'Senior React, Node, Python & Cloud developers.', icon: Code2, tag: 'Flexible', href: '#who-we-are' },
+            { title: 'Dedicated Engineering Squads', desc: 'Autonomous cross-functional product teams.', icon: Rocket, href: '#who-we-are' }
           ]
         },
         {
           title: 'ENTERPRISE SCALING',
           accentColor: '#07213A',
           items: [
-            { title: 'Managed Units', desc: 'Fully managed delivery pods with lead architects.', icon: ShieldCheck },
-            { title: 'CTO-as-a-Service', desc: 'Fractional technical leadership & oversight.', icon: Sparkles }
+            { title: 'Managed Units', desc: 'Fully managed delivery pods with lead architects.', icon: ShieldCheck, href: '#who-we-are' },
+            { title: 'CTO-as-a-Service', desc: 'Fractional technical leadership & oversight.', icon: Sparkles, href: '#who-we-are' }
           ]
         }
       ]
@@ -199,16 +220,17 @@ export default function Navbar({ onOpenContact }) {
 
   // Solutions Data for Standard Dropdown
   const solutionsList = [
-    { title: 'FinTech & Banking', desc: 'Secure payment gateways & ledger systems.', icon: Lock, badge: 'PCI-DSS' },
-    { title: 'Healthcare & MedTech', desc: 'HIPAA-compliant platforms & patient analytics.', icon: Activity, badge: 'HIPAA' },
-    { title: 'E-Commerce & Retail', desc: 'High-concurrency headless storefronts.', icon: Rocket },
-    { title: 'SaaS & Enterprise', desc: 'Multi-tenant platforms with role-based access.', icon: Boxes },
-    { title: 'AI Workflows & Automation', desc: 'Enterprise n8n setups & LLM API middleware.', icon: BrainCircuit, badge: 'Popular' }
+    { title: 'FinTech & Banking', desc: 'Secure payment gateways & ledger systems.', icon: Lock, badge: 'PCI-DSS', href: '#solutions' },
+    { title: 'Healthcare & MedTech', desc: 'HIPAA-compliant platforms & patient analytics.', icon: Activity, badge: 'HIPAA', href: '#solutions' },
+    { title: 'E-Commerce & Retail', desc: 'High-concurrency headless storefronts.', icon: Rocket, href: '#solutions' },
+    { title: 'SaaS & Enterprise', desc: 'Multi-tenant platforms with role-based access.', icon: Boxes, href: '#solutions' },
+    { title: 'AI Workflows & Automation', desc: 'Enterprise n8n setups & LLM API middleware.', icon: BrainCircuit, badge: 'Popular', href: '#solutions' }
   ];
 
   const selectedCategoryObj = servicesCategories.find(c => c.id === activeCategory) || servicesCategories[0];
 
   const handleContactClick = (e) => {
+    closeDropdowns();
     if (onOpenContact) {
       e.preventDefault();
       onOpenContact();
@@ -216,12 +238,12 @@ export default function Navbar({ onOpenContact }) {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-[#07213A] border-b border-slate-800 shadow-md">
+    <header ref={headerRef} className="sticky top-0 z-50 bg-[#07213A] border-b border-slate-800 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
           {/* LEFT: BRAND LOGO */}
-          <div className="flex items-center space-x-3 cursor-pointer group">
+          <a href="#home" onClick={closeDropdowns} className="flex items-center space-x-3 cursor-pointer group">
             <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-slate-900 to-[#07213A] border border-slate-700/80 group-hover:border-[#FA782B]/60 transition-all duration-300 shadow-inner">
               <svg className="w-6 h-6 text-white group-hover:scale-105 transition-transform" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 17L10 5L16 17L20 9" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -234,12 +256,13 @@ export default function Navbar({ onOpenContact }) {
               </span>
               <span className="w-2 h-2 rounded-full bg-[#FA782B] inline-block ml-1 animate-pulse" title="Synzora Tech Engine Active"></span>
             </div>
-          </div>
+          </a>
 
           {/* CENTER: DESKTOP NAVIGATION LINKS */}
           <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2">
             <a 
               href="#home" 
+              onClick={closeDropdowns}
               className="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-white hover:bg-slate-800/60 transition-colors"
             >
               Home
@@ -247,6 +270,7 @@ export default function Navbar({ onOpenContact }) {
 
             <a 
               href="#who-we-are" 
+              onClick={closeDropdowns}
               className="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-white hover:bg-slate-800/60 transition-colors"
             >
               Who We Are
@@ -308,7 +332,8 @@ export default function Navbar({ onOpenContact }) {
                     return (
                       <a
                         key={index}
-                        href={`#solution-${index}`}
+                        href={sol.href}
+                        onClick={closeDropdowns}
                         className="flex items-start gap-3 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group"
                       >
                         <div className="p-2 rounded-lg bg-slate-100 text-[#07213A] group-hover:bg-[#FA782B] group-hover:text-white transition-colors mt-0.5">
@@ -338,6 +363,7 @@ export default function Navbar({ onOpenContact }) {
 
             <a 
               href="#our-work" 
+              onClick={closeDropdowns}
               className="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-white hover:bg-slate-800/60 transition-colors"
             >
               Our Work
@@ -441,7 +467,7 @@ export default function Navbar({ onOpenContact }) {
                   <span className="flex items-center gap-1 font-medium">
                     <Sparkles className="w-3.5 h-3.5 text-[#FA782B]" /> Enterprise Ready
                   </span>
-                  <a href="#services" className="text-[#07213A] font-semibold hover:text-[#FA782B] transition-colors flex items-center gap-1">
+                  <a href="#services" onClick={closeDropdowns} className="text-[#07213A] font-semibold hover:text-[#FA782B] transition-colors flex items-center gap-1">
                     View All <ArrowRight className="w-3 h-3" />
                   </a>
                 </div>
@@ -478,7 +504,8 @@ export default function Navbar({ onOpenContact }) {
                             return (
                               <a
                                 key={itemIdx}
-                                href="#services"
+                                href={item.href}
+                                onClick={closeDropdowns}
                                 className="group block p-2.5 rounded-xl hover:bg-slate-50 transition-all border border-transparent hover:border-slate-100"
                               >
                                 <div className="flex items-center justify-between">
@@ -538,10 +565,10 @@ export default function Navbar({ onOpenContact }) {
 
       {/* MOBILE DRAWER NAVIGATION MENU */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-[#07213A] border-b border-slate-800 px-4 pt-2 pb-6 space-y-3 animate-mega-fadeIn max-h-[85vh] overflow-y-auto">
+        <div className="lg:hidden bg-[#07213A] border-b border-slate-800 px-4 pt-2 pb-6 space-y-3 animate-mega-fadeIn max-h-[85vh] overflow-y-auto z-50">
           <a
             href="#home"
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={closeDropdowns}
             className="block px-3 py-2.5 rounded-lg text-base font-semibold text-white hover:bg-slate-800"
           >
             Home
@@ -549,7 +576,7 @@ export default function Navbar({ onOpenContact }) {
 
           <a
             href="#who-we-are"
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={closeDropdowns}
             className="block px-3 py-2.5 rounded-lg text-base font-semibold text-white hover:bg-slate-800"
           >
             Who We Are
@@ -580,8 +607,8 @@ export default function Navbar({ onOpenContact }) {
                           {col.items.map((it, iIdx) => (
                             <a
                               key={iIdx}
-                              href="#services"
-                              onClick={() => setIsMobileMenuOpen(false)}
+                              href={it.href}
+                              onClick={closeDropdowns}
                               className="block text-xs text-slate-300 hover:text-[#FA782B] py-0.5"
                             >
                               • {it.title}
@@ -611,8 +638,8 @@ export default function Navbar({ onOpenContact }) {
                 {solutionsList.map((sol, index) => (
                   <a
                     key={index}
-                    href={`#solution-${index}`}
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    href={sol.href}
+                    onClick={closeDropdowns}
                     className="block text-sm text-slate-300 hover:text-[#FA782B] py-1"
                   >
                     {sol.title}
@@ -624,7 +651,7 @@ export default function Navbar({ onOpenContact }) {
 
           <a
             href="#our-work"
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={closeDropdowns}
             className="block px-3 py-2.5 rounded-lg text-base font-semibold text-white hover:bg-slate-800"
           >
             Our Work
@@ -634,10 +661,7 @@ export default function Navbar({ onOpenContact }) {
           <div className="pt-4 border-t border-slate-800">
             <button
               type="button"
-              onClick={(e) => {
-                setIsMobileMenuOpen(false);
-                handleContactClick(e);
-              }}
+              onClick={handleContactClick}
               className="w-full flex items-center justify-center px-5 py-3 rounded-lg text-center font-bold text-white bg-[#FA782B] hover:bg-[#e6671d] shadow-md cursor-pointer"
             >
               Contact Us
