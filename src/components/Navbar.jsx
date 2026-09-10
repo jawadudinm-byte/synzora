@@ -244,17 +244,14 @@ export default function Navbar({ onOpenContact }) {
           
           {/* LEFT: BRAND LOGO */}
           <a href="#home" onClick={closeDropdowns} className="flex items-center space-x-3 cursor-pointer group">
-            <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-slate-900 to-[#07213A] border border-slate-700/80 group-hover:border-blue-500/60 transition-all duration-300 shadow-inner">
-              <svg className="w-6 h-6 text-white group-hover:scale-105 transition-transform" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 17L10 5L16 17L20 9" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <circle cx="20" cy="7" r="2" fill="#2563EB" />
-              </svg>
+            <div className="relative flex items-center justify-center w-10 h-10 rounded-xl overflow-hidden shadow-lg border border-slate-700/80 group-hover:border-cyan-400/80 group-hover:shadow-[0_0_18px_rgba(56,189,248,0.4)] transition-all duration-300 bg-[#07182C]">
+              <img src="/favicon.svg" alt="Synzora Emblem" className="w-full h-full object-contain group-hover:scale-105 transition-transform p-0.5" />
             </div>
             <div className="flex items-center">
-              <span className="text-2xl font-extrabold tracking-tight text-white">
-                Synzora
+              <span className="text-2xl font-extrabold tracking-wider text-white font-brand group-hover:text-cyan-200 transition-colors">
+                SYNZORA
               </span>
-              <span className="w-2 h-2 rounded-full bg-blue-500 inline-block ml-1 animate-pulse" title="Synzora Tech Engine Active"></span>
+              <span className="w-2 h-2 rounded-full bg-cyan-400 inline-block ml-1.5 animate-pulse shadow-[0_0_8px_#38bdf8]" title="Synzora Tech Engine Active"></span>
             </div>
           </a>
 

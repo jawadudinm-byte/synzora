@@ -19,6 +19,8 @@ export default {
         }
       },
       fontFamily: {
+        brand: ['Orbitron', 'sans-serif'],
+        orbitron: ['Orbitron', 'sans-serif'],
         sans: ['Georgia', 'Times New Roman', 'serif'],
         serif: ['Georgia', 'Times New Roman', 'serif'],
       },
